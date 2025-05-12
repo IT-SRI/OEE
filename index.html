@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OEE Dashboard</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f0f2f5;
+    }
+
+    /* Header */
+    header {
+      background-color: #094cdb;
+      color: white;
+      padding: 15px 30px;
+      font-size: 24px;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Centered Card Container */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 50px;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 300px;
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card h2 {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: block;
+      height: 80px;
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      background-color: #007afc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #037dff;
+    }
+
+    h2{
+      color: rgb(0, 0, 0);
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    MEGA Line OEE monitoring
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>Cam Coiling</h2>
+      <div>
+        <button class="btn" onclick="goTo('http://192.168.0.64:1880/ui')">Cam Coiling (A1)</button>
+        <button class="btn" onclick="goTo('http://192.168.0.64:1881/ui')">Cam Coiling (A2)</button>
+        <button class="btn" onclick="goTo('http://192.168.0.64:1882/ui')">Cam Coiling (3)</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Testing</h2>
+      <div>
+        <button class="btn" style="margin-top: 0;" onclick="goTo('http://192.168.0.64:1900/ui')">Testing room</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function goTo(url) {
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
