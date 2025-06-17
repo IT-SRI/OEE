@@ -19,13 +19,16 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
+    
+
     .container {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 50px;
-      padding: 40px;
-      justify-content: start;
-    }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 40px;
+    justify-content: start;
+}
+
 
     .card {
       background: white;
@@ -42,22 +45,25 @@
       margin-bottom: 20px;
       color: rgb(0, 0, 0);
       font-size: 30px;
-      text-transform: uppercase;
+      
     }
 
     .btn {
       display: block;
       height: 80px;
-      width: 100%;
+      width: 70%;
       padding: 10px;
       margin: 10px 0;
       background-color: #007afc;
       color: white;
       border: none;
+      font-weight: bold;
       border-radius: 8px;
       font-size: 16px;
       cursor: pointer;
       transition: 0.3s;
+      justify-self: center;
+      
     }
 
     .btn:hover {
@@ -99,32 +105,9 @@
     </div>
 
     <div class="card">
-      <h2>Auto Gap Sizing</h2>
-      <div></div>
-    </div>
-
-    <div class="card">
-      <h2>Side Face Grinding</h2>
-      <div></div>
-    </div>
-
-    <div class="card">
-      <h2>Manual Lapping</h2>
-      <div></div>
-    </div>
-
-    <!-- แถวที่ 2 -->
-    <div class="card row-2">
-      <h2>Testing</h2>
+      <h2>Line 1B & Laser Marking</h2>
       <div>
-        <button class="btn" onclick="goTo('http://192.168.0.64:1900/ui')">Testing room</button>
-      </div>
-    </div>
-
-    <div class="card row-2">
-      <h2>Iot For Appearance</h2>
-      <div>
-        <button class="btn" onclick="goTo('http://192.168.0.64:3300/ui/')">Appearance No.1</button>
+        <button class="btn" onclick="goTo('http://192.168.0.63:8088/data/perspective/client/SRI-IOT')">Line 1B & Laser Marking</button>
       </div>
     </div>
 
@@ -137,6 +120,31 @@
         <button class="btn" onclick="goTo('http://192.168.20.232:1880/ui/')">IP2</button>
         <button class="btn" onclick="goTo('http://192.168.20.233:1880/ui/')">IP3</button>
         <button class="btn" onclick="goTo('http://192.168.20.234:1880/ui/')">IP4</button>
+      </div>
+    </div>
+
+    
+
+    <div class="card ">
+      <h2>Testing room</h2>
+      <div>
+        <button class="btn" onclick="goTo('http://192.168.0.64:1900/ui')">Testing room</button>
+      </div>
+    </div>
+
+    
+
+    <div class="card ">
+      <h2>Appearance</h2>
+      <div>
+        <button class="btn" onclick="goTo('http://192.168.0.64:3300/ui/')">Appearance No.1</button>
+      </div>
+    </div>
+
+    <div class="card ">
+      <h2>Maintenance</h2>
+      <div>
+        <button class="btn" onclick="goTo('http://www.thaiiiot.com/login.php?108=OmrAwxiODnKIdWUB&a=dlFFeTVWRnkrRXVxMjZ1TTJIMVFrUT09')">IIoT Monitoring</button>
       </div>
     </div>
   </div>
